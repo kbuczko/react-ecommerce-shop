@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+}
+
+.nav__ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__ul li:first-child {
+  margin-inline-start: 4em;
+}
+
+.nav__ul li {
+  display: inline-block;
+  margin-inline-start: 2em;
+}
+
+.nav__buttons button {
+  background: none;
+  border: none;
+}
+
+.nav__buttons__cart {
+  height: 24px;
+}
+
+.nav__buttons__avatar img {
+  height: 48px;
+}
