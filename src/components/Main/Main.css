@@ -1,0 +1,22 @@
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main section:last-child {
+  flex: 3;
+}
+
+@media screen and (min-width: 576px) {
+  main {
+    flex-direction: row;
+    gap: 5em;
+    margin-block-start: 4em;
+  }
+}

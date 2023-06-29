@@ -1,0 +1,82 @@
+.main__company {
+  color: var(--orange);
+}
+
+.main__name {
+  font-size: 36px;
+}
+
+.main__description {
+  color: var(--dark-grayish-blue);
+  margin: 2em 0 1em 0;
+}
+
+.main__price {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.main__price h3 {
+  font-size: 24px;
+}
+
+.main__price-badge {
+  background-color: var(--pale-orange);
+  color: var(--orange);
+  padding: 0 0.5em;
+}
+
+.main__price-old {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.main__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-block-end: 1em;
+}
+
+.main__actions-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.main__actions-quantity {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  background-color: hsl(223, 64%, 98%);
+  padding: 0.5em 1em;
+  justify-content: center;
+}
+
+.main__actions-cart {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 4em;
+  justify-content: center;
+}
+
+.main__actions-cart img {
+  width: 16px;
+  margin-inline-end: 1em;
+}
+
+@media screen and (min-width: 576px) {
+  .main__details {
+    padding-block: 5em;
+  }
+  .main__actions {
+    margin-block-start: 1em;
+    flex-direction: row;
+  }
+}

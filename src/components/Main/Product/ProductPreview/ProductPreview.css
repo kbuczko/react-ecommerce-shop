@@ -1,0 +1,34 @@
+.main__product {
+  flex: 1;
+}
+
+.main__img {
+  position: relative;
+}
+
+.main__thumbnails {
+  display: none;
+}
+
+.main__thumbnails img {
+  width: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .main__product {
+    flex: 2.5;
+  }
+
+  .main__thumbnails {
+    margin-block-start: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main__img img {
+    border-radius: 10px;
+  }
+}

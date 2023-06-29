@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -14,6 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 img {
@@ -23,5 +26,6 @@ img {
 
 .app {
   max-width: 1280px;
+  min-height: 100vh;
   margin: 0 auto;
 }
