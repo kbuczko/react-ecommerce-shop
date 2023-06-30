@@ -13,7 +13,6 @@
 .main__thumbnails img {
   width: 100px;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 576px) {

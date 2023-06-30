@@ -4,9 +4,19 @@ import avatar from "../../images/image-avatar.png";
 import menu from "../../images/icon-menu.svg";
 import "./Header.css";
 import {useState} from "react";
+import Cart from "../Cart/Cart";
+import {useSelector} from "react-redux";
+import {Product} from "../../models/Product";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const [cartOpened, setCartOpened] = useState(false);
+  const productsQuantity = useSelector((state: {cart: any}) =>
+    state.cart.products.reduce(
+      (acc: number, currValue: Product) => acc + currValue.quantity,
+      0
+    )
+  );
   return (
     <header className="header">
       <button className="header__mobile" onClick={() => setMenuOpened(true)}>
@@ -44,13 +54,24 @@ const Header = () => {
           </div>
           <div className="nav__buttons">
             <li>
-              <button className="nav__buttons__cart">
-                <img src={cart} alt="" />
-              </button>
+              <div className="nav__buttons__cart-wrapper">
+                <button
+                  className="nav__buttons__cart"
+                  onClick={() => setCartOpened((prevValue) => !prevValue)}
+                >
+                  <img src={cart} alt="" />
+                </button>
+                {productsQuantity > 0 && (
+                  <div className="nav__buttons__cart-badge">
+                    {productsQuantity}
+                  </div>
+                )}
+              </div>
               <button className="nav__buttons__avatar">
                 <img src={avatar} alt="" />
               </button>
             </li>
+            {cartOpened && <Cart />}
           </div>
         </ul>
       </nav>

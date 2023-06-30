@@ -6,7 +6,7 @@ import CarouselModal from "./components/Modals/CarouselModal/CarouselModal";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = (imgPath) => {
+  const handleOpenModal = () => {
     setIsModalOpen(true);
   };
   const handleCloseModal = () => {
@@ -15,11 +15,7 @@ function App() {
 
   return (
     <div className="app">
-      <CarouselModal
-        open={isModalOpen}
-        onClose={handleCloseModal}
-        onOpen={handleOpenModal}
-      />
+      <CarouselModal open={isModalOpen} onClose={handleCloseModal} />
       <Header />
       <Main onOpenModal={handleOpenModal} />
     </div>

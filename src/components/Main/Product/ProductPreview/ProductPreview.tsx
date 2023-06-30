@@ -5,7 +5,9 @@ import image3Thumbnail from "../../../../images/image-product-3-thumbnail.jpg";
 import image4Thumbnail from "../../../../images/image-product-4-thumbnail.jpg";
 import "./ProductPreview.css";
 
-const ProductPreview = ({onOpenModal}) => {
+const ProductPreview: React.FC<{onOpenModal: (img: string) => void}> = ({
+  onOpenModal,
+}) => {
   const imgs = [
     image1Thumbnail,
     image2Thumbnail,

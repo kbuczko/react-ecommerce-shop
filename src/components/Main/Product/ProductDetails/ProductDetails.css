@@ -42,7 +42,6 @@
 .main__actions-btn {
   border: none;
   background: none;
-  cursor: pointer;
 }
 
 .main__actions-quantity {
@@ -55,7 +54,6 @@
 }
 
 .main__actions-cart {
-  cursor: pointer;
   display: flex;
   align-items: center;
   color: white;

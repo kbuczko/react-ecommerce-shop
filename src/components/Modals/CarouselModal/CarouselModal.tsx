@@ -11,25 +11,29 @@ import product14Thumbnail from "../../../images/image-product-4-thumbnail.jpg";
 import previous from "../../../images/icon-previous.svg";
 import next from "../../../images/icon-next.svg";
 import {useState} from "react";
+import {Image} from "./Image";
 
-const imgs = [
+const imgs: Image[] = [
   {mainSrc: product11, thumbnailSrc: product11Thumbnail},
   {mainSrc: product12, thumbnailSrc: product12Thumbnail},
   {mainSrc: product13, thumbnailSrc: product13Thumbnail},
   {mainSrc: product14, thumbnailSrc: product14Thumbnail},
 ];
 
-const CarouselModal = ({children, open, onClose, onOpen}) => {
+const CarouselModal: React.FC<{
+  open: boolean;
+  onClose: () => void;
+}> = ({open, onClose}) => {
   const [activeImg, setActiveImg] = useState(imgs[0].mainSrc);
 
-  const handleNextImg = (img) => {
+  const handleNextImg = (img: string) => {
     const imgPosition = imgs.findIndex((image) => image.mainSrc === img);
     if (imgPosition < imgs.length - 1) {
       setActiveImg(imgs[imgPosition + 1].mainSrc);
     } else setActiveImg(imgs[0].mainSrc);
   };
 
-  const handlePreviousImg = (img) => {
+  const handlePreviousImg = (img: string) => {
     const imgPosition = imgs.findIndex((image) => image.mainSrc === img);
     if (imgPosition > 0) {
       setActiveImg(imgs[imgPosition - 1].mainSrc);

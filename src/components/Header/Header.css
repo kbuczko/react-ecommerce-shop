@@ -38,7 +38,6 @@
 .header__mobile {
   background: none;
   border: none;
-  cursor: pointer;
 }
 
 .header__logo {
@@ -69,6 +68,9 @@
   display: inline-block;
   margin-inline-start: 2em;
 }
+.nav__buttons {
+  position: relative;
+}
 
 .nav__buttons button {
   background: none;
@@ -87,6 +89,21 @@
 
 .nav__buttons__avatar img {
   height: 48px;
+}
+
+.nav__buttons__cart-wrapper {
+  position: relative;
+}
+
+.nav__buttons__cart-badge {
+  padding: 1px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -14px;
+  right: -4px;
+  background-color: hsl(26, 100%, 55%);
+  color: #fff;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 763px) {
